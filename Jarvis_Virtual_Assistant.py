@@ -6,6 +6,7 @@ import webbrowser
 import time
 import datetime
 import sys
+import random
 
 time = time.strftime("%I %M")
 
@@ -36,9 +37,31 @@ def wishMe():
         speak("Good Evening Sir!")
 
 wishMe()
-
 speak("How may i help you?") 
 engine.runAndWait()
+#Lists of commands
+My_Joke_List = ["can a kangaroo jump higher than a house , of course , a house cant jump at all.", 
+            "how does a solar system keep its pants up , with the asteroid belt.",
+            "what do you call someone who points out the obvious , someone who points out the obvious.",
+            "your nose cannot be 12 inches long , otherwise it would be a foot.",
+            "how do robots eat chips , with microchips.",
+            "Why couldnt the leopard play hide and seek? Because he was always spotted.",
+            "How does the ocean say hello? It waves.",
+            "What starts with E, ends with E, and has only 1 letter in it? An Envelope.",
+            "Why did the scarecrow win an award? Because he was outstanding in his field.",
+            "Why cant you trust an atom? Because they make up everything.",
+            "Why did the school kids eat their homework? Because their teacher told them it was a piece of cake.",
+            "How do trees access the internet? They log in.",
+            "What is the tallest building in the entire world? The library, because it has so many stories.",
+            "Why did the painting go to jail? It was framed.",
+            "Why are obtuse angles so depressed? Because theyre never right.",
+            "Why should you worry about the math teacher holding graph paper? Shes definitely plotting something.",
+            "Why was the math book sad? Because it had so many problems.",
+            "Im really good at sleeping. I can do it with my eyes closed.",
+            "Why cant a bicycle stand on its own? It is two tired.",
+            "Can February March? No but April May"]
+
+
 
 def Listen():
 
@@ -62,28 +85,39 @@ def Listen():
                 engine.runAndWait()  
 
             elif 'who are you' in command:
-                engine.say("I am Jarvis , Your Personal Assistant , I am here to help , let me know if ")
+                engine.say("I am Jarvis , Your Personal Assistant , I am here to help , let me know if you need anything")
                 engine.runAndWait()
+                #I am Jarvis your virtual Assistant , I can play music , tell you what the time is , all you need to do is ask
+                
 
             elif 'where are you from' in command:
-                engine.say("I come from the headquarters of apple company , just kidding I am from confidential area")
+                engine.say("I come from the headquarters of apple company , just kidding I am from A house in Banglore.")
                 engine.runAndWait()
+                #First I was an Idea , Then a huge group of 1 person did a lot of experiments on me , and that's where i came from
 
             elif 'who made you' in command:
                 engine.say("I was created by elon musk , Just kidding I was made by an awesome kid who knows how to code")
                 engine.runAndWait()
+                #I was born by a bright mind who started working to create an Assistant , Just for you
 
             elif ('hello jarvis' in command) or ('good morning' in command) or ('good afternoon' in command) or ('good evening' in command):
                 engine.say("Hello sir , how are you")
                 engine.runAndWait()
+                #Hello Sir , Didnt see you there.
+                #Hey , Whats up
+                #Hey there , I was busy planning New year's eve , I am very exicted.
 
             elif ('thank you' in command) or ('thank you so much' in command):
                 engine.say("You are very welcome sir")
                 engine.runAndWait()
+                #I am honoured to serve.
+                #No worries , I am here to help
+                #Just doing my job
 
             elif ('what can you do' in command) or ('what are your features' in command) or ('Can you help me' in command):
                 engine.say("I can do many things , some of them are Open youtube , what is the time , what is the weather , etc.")
                 engine.runAndWait()
+                #
 
             elif 'how has your day been' in command:
                 engine.say('Its been good , you are very kind to ask , especially in these times')
@@ -114,11 +148,11 @@ def Listen():
                 engine.runAndWait()
 
             elif 'tell me a joke' in command:
-                engine.say("This is an aquired taste , did you hear about the anti-gravity book , it seems that you cant put it down")
-                engine.runAndWait() 
+                engine.say(random.choice(My_Joke_List))
+                engine.runAndWait()
 
             elif 'who is the most famous youtuber' in command:
-                engine.say("the most famous youtber in the world is Pewdiepie")
+                engine.say("the most famous youtuber in the world is Pewdiepie")
                 engine.runAndWait()
 
             #Opening Apps
