@@ -85,11 +85,6 @@ My_WhatCanYouNotDo_List = ["I cant give you a Hi-fi , but i still think you are 
 
 My_HowDoYouDoThat_List = ["It was either magic , or good programming", "Magic", "shh , it's a secret", "I am not sure"]
 
-
-
-
-
-
 def Listen():
 
     kill = False
