@@ -85,6 +85,8 @@ My_WhatCanYouNotDo_List = ["I cant give you a Hi-fi , but i still think you are 
 
 My_HowDoYouDoThat_List = ["It was either magic , or good programming", "Magic", "shh , it's a secret", "I am not sure"]
 
+
+
 def Listen():
 
     kill = False
@@ -170,11 +172,11 @@ def Listen():
                 engine.say("Self destructing in 3, 2, 1         Actually I think I will stick around")
                 engine.runAndWait()
 
-             elif 'do you breathe' in command:
+             elif ('do you breathe' in command) or ('can you breathe' in command):
                 engine.say("I dont , which means I never have to worry about bad breath.")
                 engine.runAndWait()
             
-             elif 'can you eat' in command:
+             elif ('can you eat' in command) or ('do you eat+' in command):
                 engine.say("My device is all charged up , i am ready to help")
                 engine.runAndWait()
         
