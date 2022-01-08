@@ -65,7 +65,7 @@ My_WhoAreYou_List = ["I am Jarvis , Your Personal Assistant , I am here to help 
 
 My_WhereAreYouFrom_List = ["First I was an Idea , Then someone did a lot of experiments on me , and that's where i came from", "I come from the headquarters of apple company , just kidding I am from A house in Banglore."]
 
-My_WhoMadeYou_List = ["I was created by elon musk , Just kidding I was made by an awesome kid who knows how to code", "I was born by a bright mind who started working to create an Assistant , Just for you"]
+My_WhoMadeYou_List = ["I was created by elon musk , Just kidding , I was made by an awesome kid who knows how to code", "I was born by a bright mind who started working to create an Assistant , Just for you"]
 
 My_Hello_List = ["Hello sir , how are you", "Hello Sir , Didnt see you there.", "Hey , Whats up", "Hey there , I was busy planning New year's eve , I am very exicted."]
 
@@ -120,7 +120,7 @@ def Listen():
                 engine.say(random.choice(My_WhoMadeYou_List))
                 engine.runAndWait()     
 
-            elif ('hello jarvis' in command) or ('good morning' in command) or ('good afternoon' in command) or ('good evening' in command):
+            elif ('whats up' in command) or ('hey' in command) or ('hello' in command) or ('hello jarvis' in command) or ('good morning' in command) or ('good afternoon' in command) or ('good evening' in command):
                 engine.say(random.choice(My_Hello_List))
                 engine.runAndWait()
 
@@ -169,14 +169,14 @@ def Listen():
                 engine.runAndWait()
 
             elif 'self destruct' in command:
-                engine.say("Self destructing in 3, 2, 1         Actually I think I will stick around")
+                engine.say("Self destructing in 3, 2, 1 . Actually I think I will stick around")
                 engine.runAndWait()
 
-             elif ('do you breathe' in command) or ('can you breathe' in command):
+            elif 'do you breathe' in command:
                 engine.say("I dont , which means I never have to worry about bad breath.")
                 engine.runAndWait()
             
-             elif ('can you eat' in command) or ('do you eat+' in command):
+            elif 'can you eat' in command:
                 engine.say("My device is all charged up , i am ready to help")
                 engine.runAndWait()
         
