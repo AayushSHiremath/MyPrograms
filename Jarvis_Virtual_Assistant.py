@@ -85,8 +85,6 @@ My_WhatCanYouNotDo_List = ["I cant give you a Hi-fi , but i still think you are 
 
 My_HowDoYouDoThat_List = ["It was either magic , or good programming", "Magic", "shh , it's a secret", "I am not sure"]
 
-
-
 def Listen():
 
     kill = False
@@ -97,9 +95,7 @@ def Listen():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'jarvis' in command:
-                command = command.replace('jarvis', '')
-                print(command)
+
             print(command)
 
             #Basic commands
@@ -302,6 +298,19 @@ def Listen():
         print("")
         if kill:
             sys.exit(1)
-        
+
+def Startup():
+
+    try:
+        with sr.Microphone() as source:
+            voice = listener.listen(source)
+            command = listener.recognize_google(voice)
+            command = command.lower()
+            print(command)
+        if 'jarvis' in command:
+            Listen()
+    except:
+        pass
+
 while True:
-    Listen()
+    Startup()
